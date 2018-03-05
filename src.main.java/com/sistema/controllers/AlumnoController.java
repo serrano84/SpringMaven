@@ -3,14 +3,17 @@ package com.sistema.controllers;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sistema.beans.Alumno;
+import com.sistema.beans.Cliente;
 
 @Controller
+@CrossOrigin("*")
 @RequestMapping(value="alumnosCtrl")
 public class AlumnoController {
 	
@@ -34,10 +37,12 @@ public class AlumnoController {
 	@ResponseBody
 	public ResponseEntity getDatos(){
 		System.out.println("llego al metodo getDatos");
-		Alumno alumno = new Alumno();
-		alumno.setNombre("Luis222");
-		alumno.setApellido("Serrano");
-		return new ResponseEntity<>(alumno, HttpStatus.OK);
+		Cliente cliente = new Cliente();
+		cliente.setNombre("Luis222");
+		cliente.setApellido("Serrano");
+		cliente.setRfc("sedl84");
+		cliente.setGrupo(2);
+		return new ResponseEntity<>(cliente, HttpStatus.OK);
 	}
 	
 	

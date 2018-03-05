@@ -1,6 +1,6 @@
 package com.sistema.beans;
 
-public class Alumno {
+public class Cliente {
 	
 	private String nombre;
 	private String apellido;
@@ -34,8 +34,5 @@ public class Alumno {
 	public void setGrupo(int grupo) {
 		this.grupo = grupo;
 	}
-	
-	
-		
 
 }
