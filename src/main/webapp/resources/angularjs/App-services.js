@@ -8,7 +8,7 @@ angular.module('sistemaPagosApp.services')
 			console.log('GET:getDatos URL[AlumnoCtrl]');
 			return $http({
 				url: 'alumnosCtrl/getDatosAlumnos',
-				method: 'POST',
+				method: 'GET',
 				contentType: 'application/json'
 			});
 		};		

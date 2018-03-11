@@ -4,8 +4,6 @@ public class Alumno {
 	
 	private String nombre;
 	private String apellido;
-	private String rfc;
-	private int grupo;
 	
 	
 	
@@ -22,19 +20,7 @@ public class Alumno {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-	public String getRfc() {
-		return rfc;
-	}
-	public void setRfc(String rfc) {
-		this.rfc = rfc;
-	}
-	public int getGrupo() {
-		return grupo;
-	}
-	public void setGrupo(int grupo) {
-		this.grupo = grupo;
-	}
-	
+		
 	
 		
 

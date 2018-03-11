@@ -33,16 +33,27 @@ public class AlumnoController {
 	
 
 	@SuppressWarnings("rawtypes")
-	@RequestMapping(value="/getDatosAlumnos", method=RequestMethod.POST)
+	@RequestMapping(value="/getDatosCliente", method=RequestMethod.GET)
 	@ResponseBody
-	public ResponseEntity getDatos(){
-		System.out.println("llego al metodo getDatos");
+	public ResponseEntity getDatosCliente(){
+		System.out.println("llego al metodo getDatosCliente");
 		Cliente cliente = new Cliente();
 		cliente.setNombre("Luis222");
 		cliente.setApellido("Serrano");
 		cliente.setRfc("sedl84");
 		cliente.setGrupo(2);
 		return new ResponseEntity<>(cliente, HttpStatus.OK);
+	}
+	
+	@SuppressWarnings("rawtypes")
+	@RequestMapping(value="/getDatosAlumnos", method=RequestMethod.GET)
+	@ResponseBody
+	public ResponseEntity getDatos(){
+		System.out.println("llego al metodo getDatosAlumnos");
+		Alumno alumno = new Alumno();
+		alumno.setNombre("Juanelo");
+		alumno.setApellido("Simpsons");
+		return new ResponseEntity<>(alumno, HttpStatus.OK);
 	}
 	
 	

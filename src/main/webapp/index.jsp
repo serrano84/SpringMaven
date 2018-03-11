@@ -38,7 +38,7 @@
 
 <div class="container"  >
   <h2>Vertical (basic) form</h2>
-  <form action=""<%=request.getContextPath()%>/alumnosCtrl">
+  <form action=""<%=request.getContextPath()%>/alumnosCtrl/">
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -63,7 +63,11 @@
 
 <div ng-controller="Mycontrol"> 
 <button type="button" class="btn btn-success" ng-click="getDatos()">Success</button>
-<input  id="correo"  name="correo" value={{alumno.nombre}}>
+<br>
+<p>Nombre:</p>
+<input  id="name"  name="name" value={{alumno.nombre}}>
+<p>Apellido:</p>
+<input  id="surname"  name="surname" value={{alumno.apellido}}>
 </div>
 
 </body>
